@@ -1,15 +1,15 @@
 package util_password
 
-func newPasswordValidateResult(isValid bool, invalidList PasswordValidateInvalidList) PasswordValidateResult {
-	return PasswordValidateResult{
+func newPasswordValidateResult(isValid bool, invalidList passwordValidateInvalidList) passwordValidateResult {
+	return passwordValidateResult{
 		isValid:     isValid,
 		invalidList: invalidList,
 	}
 }
 
-type PasswordValidateResult struct {
+type passwordValidateResult struct {
 	isValid     bool
-	invalidList PasswordValidateInvalidList
+	invalidList passwordValidateInvalidList
 }
 
 /*
@@ -18,7 +18,7 @@ type PasswordValidateResult struct {
 /*
 	if valid return true and false otherwise
 */
-func (p *PasswordValidateResult) IsValid() bool {
+func (p *passwordValidateResult) IsValid() bool {
 	return p.isValid
 }
 
@@ -26,8 +26,8 @@ func (p *PasswordValidateResult) IsValid() bool {
 	Invalid list
 */
 /*
-	return PasswordValidateInvalidList struct
+	return passwordValidateInvalidList struct
 */
-func (p *PasswordValidateResult) InvalidList() *PasswordValidateInvalidList {
+func (p *passwordValidateResult) InvalidList() *passwordValidateInvalidList {
 	return &p.invalidList
 }

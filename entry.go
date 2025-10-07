@@ -8,7 +8,7 @@ func PasswordCompare(hashedPassword, rawPassword string) error {
 	return passwordCompare(hashedPassword, rawPassword)
 }
 
-func PasswordValidate(text string, rules []validateKey, lang Lang) PasswordValidateResult {
+func PasswordValidate(text string, rules []validateKey, lang Lang) passwordValidateResult {
 	return passwordValidate(text, rules, lang)
 }
 

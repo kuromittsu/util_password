@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-type PasswordValidateInvalidList struct {
+type passwordValidateInvalidList struct {
 	invalidList []string
 }
 
@@ -15,7 +15,7 @@ type PasswordValidateInvalidList struct {
 /*
 	get raw invalid list
 */
-func (p *PasswordValidateInvalidList) Get() []string {
+func (p *passwordValidateInvalidList) Get() []string {
 
 	return p.invalidList
 }
@@ -27,7 +27,7 @@ func (p *PasswordValidateInvalidList) Get() []string {
 	get joined invalid list by provided join string (default ", ")
 	and also return error version
 */
-func (p *PasswordValidateInvalidList) GetJoined(join string) (string, error) {
+func (p *passwordValidateInvalidList) GetJoined(join string) (string, error) {
 
 	if join == "" {
 		join = ", "

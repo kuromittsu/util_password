@@ -2,7 +2,7 @@ package util_password
 
 import "regexp"
 
-func passwordValidate(text string, rules []validateKey, lang Lang) PasswordValidateResult {
+func passwordValidate(text string, rules []validateKey, lang Lang) passwordValidateResult {
 
 	var invalidList []string
 
@@ -18,7 +18,7 @@ func passwordValidate(text string, rules []validateKey, lang Lang) PasswordValid
 
 	return newPasswordValidateResult(
 		len(invalidList) == 0,
-		PasswordValidateInvalidList{
+		passwordValidateInvalidList{
 			invalidList: invalidList,
 		},
 	)
